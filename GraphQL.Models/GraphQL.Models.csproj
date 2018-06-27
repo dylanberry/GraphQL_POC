@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Test;Production;Uat</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.1.0" />
+    <PackageReference Include="GraphQL" Version="2.0.0-alpha-912" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FarmPro.Services.Core\FarmPro.Services.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Graph\" />
+    <Folder Include="Graph\MockData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove=".editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Attributes\ExpandAttribute.cs" />
+    <Compile Remove="Constants\ModelConstants.cs" />
+    <Compile Remove="Converters\NullableIntEnumConverter.cs" />
+    <Compile Remove="Entities\ActiveIngredient.cs" />
+    <Compile Remove="Entities\Base\ActivityChildItem.cs" />
+    <Compile Remove="Enums\Enums.cs" />
+    <Compile Remove="Entities\Base\SubscriptionCropYearEntity.cs" />
+    <Compile Remove="Graph\FieldMutation.cs" />
+  </ItemGroup>
+</Project>
